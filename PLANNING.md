@@ -38,3 +38,8 @@ Maybe?
 - Containerize the development environment if we get around to it (for practice)
 - Use TS from the start
 
+## Links / Resources
+
+- [GitHub search for similar projects (post 2024)](https://github.com/search?q=alt+text+generator+pushed%3A%3E2024-01-01+&type=repositories)
+- [Vercel "Hobby" plan details](https://vercel.com/docs/accounts/plans/hobby)
+
