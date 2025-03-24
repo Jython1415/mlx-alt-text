@@ -6,5 +6,6 @@ readme = "README.md"
 requires-python = ">=3.8" # TODO check compatability with various versions of Python
 dependencies = [
     "click>=8.1.8",
+    "mlx>=0.18.1",
     "mlx-vlm>=0.0.7",
 ]
