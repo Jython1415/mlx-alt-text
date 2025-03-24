@@ -1,7 +1,9 @@
 [project]
 name = "mlx-alt-text"
 version = "0.1.0"
-description = "Add your description here"
+description = "Local-first alt-text generator built on top of MLX-VLM"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "click>=8.1.8",
+]
