@@ -8,6 +8,7 @@ dependencies = [
     "click>=8.1.8",
     "mlx>=0.18.1",
     "mlx-vlm>=0.0.7",
+    "torch>=2.5.1",
 ]
 
 [dependency-groups]
