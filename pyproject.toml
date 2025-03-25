@@ -14,3 +14,10 @@ dependencies = [
 dev = [
     "pytest>=8.3.5",
 ]
+
+[project.scripts]
+mlx-alt-text = "mlx_alt_text:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
