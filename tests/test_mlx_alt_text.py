@@ -18,16 +18,10 @@ def alt_text_generator():
     return generator
 
 
-def test_text_only_prompt(alt_text_generator: AltTextGenerator):
-    response = alt_text_generator.generate("hi")
-    assert isinstance(response, str)
-    assert len(response) > 1
-
-
 def test_image_prompt(alt_text_generator: AltTextGenerator):
     assert TINY_IMAGE.exists(), f"{TINY_IMAGE.absolute().as_posix()} does not exist"
     response = alt_text_generator.generate(
-        "Describe the image", TINY_IMAGE.absolute().as_posix()
+        TINY_IMAGE.absolute().as_posix(), "Describe the image"
     )
     assert isinstance(response, str)
     assert len(response) > 1

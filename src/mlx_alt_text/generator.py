@@ -3,9 +3,7 @@ from mlx_vlm import generate, load
 from mlx_vlm.prompt_utils import apply_chat_template
 from mlx_vlm.utils import load_config
 
-DEFAULT_MODEL = "mlx-community/Qwen2-VL-2B-Instruct-4bit"
-DEFAULT_MAX_TOKENS = 100  # TODO experiment
-DEFAULT_TEMPERATURE = 0.2  # TODO experiment
+from .constants import DEFAULT_MODEL, DEFAULT_MAX_TOKENS, DEFAULT_TEMPERATURE
 
 
 class AltTextGenerator:
@@ -31,9 +29,7 @@ class AltTextGenerator:
             self.config = load_config(self.model_name)
         return self.model, self.processor, self.config
 
-    def generate(
-        self, prompt: str, image: str | None = None, verbose: bool = False
-    ) -> str:
+    def generate(self, image: str, prompt: str, verbose: bool = False) -> str:
         """Generate alt-text for the given image"""
         model, processor, config = self._load_model()
 
@@ -43,7 +39,7 @@ class AltTextGenerator:
             model,
             processor,  # type: ignore
             formatted_prompt,  # type: ignore
-            image=image,  # type: ignore
+            image=image,
             verbose=verbose,
         )
 
