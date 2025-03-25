@@ -9,3 +9,8 @@ dependencies = [
     "mlx>=0.18.1",
     "mlx-vlm>=0.0.7",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+]
