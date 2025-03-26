@@ -3,7 +3,7 @@ name = "mlx-alt-text"
 version = "0.1.0"
 description = "Local-first alt-text generator built on top of MLX-VLM"
 readme = "README.md"
-requires-python = ">=3.8" # TODO check compatability with various versions of Python
+requires-python = ">=3.10, <3.13" # TODO set up automated tests for this
 dependencies = [
     "click>=8.1.8",
     "mlx>=0.18.1",
