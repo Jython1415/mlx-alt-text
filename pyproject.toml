@@ -11,6 +11,9 @@ dependencies = [
     "torch>=2.5.1",
 ]
 
+[project.urls]
+"Source" = "https://github.com/Jython1415/mlx-alt-text"
+
 [dependency-groups]
 dev = [
     "pytest>=8.3.5",
