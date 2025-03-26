@@ -2,10 +2,14 @@
 
 ## Immediate Goals
 
-- Add a CLI using click; barebones proof-of-concept
-- Build local proof of concept that uses [mlx-vlm](https://github.com/Blaizzy/mlx-vlm)
+- Publish the package
+- Update the README to include installation, usage, and development instructions
+- Improve the model download workflow
+  - Reject incompatible models with a helpful message
+  - Custom message when downloading a model; don't supress progress bar otherwise
 
 ## Considering
 
 - Have pre-configured prompts for different usecases
+- CLI workflow for downloading and managing models
 
