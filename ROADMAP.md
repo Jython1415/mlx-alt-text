@@ -2,11 +2,11 @@
 
 ## Immediate Goals
 
-- Update the README to include installation, usage, and development instructions
-- Publish the package
 - Improve the model download workflow
   - Reject incompatible models with a helpful message
-  - Custom message when downloading a model; don't supress progress bar otherwise
+  - Custom message when downloading a model; supress progress bar otherwise
+- Refine the default prompt
+- Test various models to provide (more informed) recommendations
 
 ## Considering
 
