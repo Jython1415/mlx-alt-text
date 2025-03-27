@@ -2,9 +2,10 @@
 
 ## Immediate Goals
 
+- Make the output just the alt-text
 - Improve the model download workflow
   - Reject incompatible models with a helpful message
-  - Custom message when downloading a model; supress progress bar otherwise
+  - Custom message when downloading a model; suppress progress bar otherwise
 - Refine the default prompt
 - Test various models to provide (more informed) recommendations
 
