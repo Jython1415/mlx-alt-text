@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.10, <3.13" # TODO set up automated tests for this
 dependencies = [
     "click>=8.1.8",
+    "huggingface-hub>=0.29.3",
     "mlx>=0.18.1",
     "mlx-vlm>=0.0.7",
     "torch>=2.5.1",

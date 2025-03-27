@@ -1,3 +1,4 @@
+from huggingface_hub.utils import disable_progress_bars
 from mlx import nn
 from mlx_vlm import generate, load
 from mlx_vlm.prompt_utils import apply_chat_template
@@ -24,6 +25,8 @@ class AltTextGenerator:
 
     def _load_model(self):
         """Load the model and processor if not already loaded"""
+
+        disable_progress_bars()
         if self.model is None:
             self.model, self.processor = load(self.model_name)
             self.config = load_config(self.model_name)
