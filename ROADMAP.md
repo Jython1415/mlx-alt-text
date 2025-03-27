@@ -1,17 +1,11 @@
 # Roadmap
 
-## Immediate Goals
+## v0.2
 
-- Make the output just the alt-text
-- Improve the model download workflow
-  - Reject incompatible models with a helpful message
-  - Custom message when downloading a model; suppress progress bar otherwise
-- Refine the default prompt
-- Test various models to provide (more informed) recommendations
+- Improved model management: [#2](https://github.com/Jython1415/mlx-alt-text/issues/2)
+- Improved defaults: [#3](https://github.com/Jython1415/mlx-alt-text/issues/3)
 
-## Considering
+## v1.0
 
-- Add `py.typed`
-- Have pre-configured prompts for different usecases
-- CLI workflow for downloading and managing models
+- Fix warnings: [#1](https://github.com/Jython1415/mlx-alt-text/issues/1)
 
