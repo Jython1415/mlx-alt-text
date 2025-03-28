@@ -118,6 +118,10 @@ uv run https://gist.githubusercontent.com/Jython1415/84f37a01fb9700d3eb72b67a522
 uv run --with <PACKAGE> --no-project -- python -c "import <PACKAGE>" # to test if the package can be installed and imported with `uv run`
 ```
 
+## Acknowledgement
+
+I was inspired to try this project after using [Simon Willison](https://simonwillison.net)'s [`llm` package](https://llm.datasette.io/en/stable/)
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
