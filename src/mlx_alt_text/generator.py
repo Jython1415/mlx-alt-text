@@ -1,22 +1,30 @@
-from huggingface_hub.utils import disable_progress_bars
+from pathlib import Path
+
+from huggingface_hub.utils.tqdm import disable_progress_bars
 from mlx import nn
 from mlx_vlm import generate, load
 from mlx_vlm.prompt_utils import apply_chat_template
 from mlx_vlm.utils import load_config
 
-from .constants import DEFAULT_MAX_TOKENS, DEFAULT_MODEL, DEFAULT_TEMPERATURE
+from .constants import DEFAULT_MAX_TOKENS, DEFAULT_TEMPERATURE
 
 
 class AltTextGenerator:
-    """Generate alt-text using MLX=VLM"""
+    """Generate alt-text using MLX-VLM"""
 
     def __init__(
         self,
-        model_name: str = DEFAULT_MODEL,
+        model_path: str | Path,
         max_tokens: int = DEFAULT_MAX_TOKENS,
         temperature: float = DEFAULT_TEMPERATURE,
     ):
-        self.model_name = model_name
+        self.model_path = Path(model_path)
+        if not self.model_path.exists():
+            raise ValueError(
+                f"Model path '{model_path}' does not exist. "
+                "Please download the model first."
+            )
+
         self.max_tokens = max_tokens
         self.temperature = temperature
         self.model: None | nn.Module = None
@@ -28,8 +36,10 @@ class AltTextGenerator:
 
         disable_progress_bars()
         if self.model is None:
-            self.model, self.processor = load(self.model_name)
-            self.config = load_config(self.model_name)
+            self.model, self.processor = load(
+                self.model_path.expanduser().absolute().as_posix()
+            )
+            self.config = load_config(self.model_path)
         return self.model, self.processor, self.config
 
     def generate(self, image: str, prompt: str, verbose: bool = False) -> str:
@@ -39,7 +49,7 @@ class AltTextGenerator:
         formatted_prompt = apply_chat_template(processor, config, prompt)
 
         output = generate(
-            model,
+            model,  # type: ignore
             processor,  # type: ignore
             formatted_prompt,  # type: ignore
             image=image,

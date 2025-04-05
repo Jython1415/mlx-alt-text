@@ -12,16 +12,15 @@ from .generator import AltTextGenerator
     type=click.Path(exists=True, file_okay=True, dir_okay=False, path_type=Path),
 )
 @click.option(
+    "--model",
+    "-m",
+    help="The path to the model to use for generation. The exact snapshot must be specified as well.",
+)
+@click.option(
     "--prompt",
     "-p",
     default="Describe this image in detail for accessibility purposes",
     help="Custom prompt to use for generation",
-)
-@click.option(
-    "--model",
-    "-m",
-    default=DEFAULT_MODEL,
-    help="Model to use for generation, try 'mlx-community/SmolVLM-Instruct-bf16' or 'mlx-community/SmolVLM-256M-Instruct-4bit'",
 )
 @click.option(
     "--max-tokens",
