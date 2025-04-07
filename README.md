@@ -9,7 +9,7 @@ MLX Alt Text is a local-first alt-text generator built on top of MLX-VLM. It all
 ## Features
 
 - Generate detailed accessibility descriptions for images
-- Run entirely on-device (no API calls except to download the model)
+- Run entirely on-device (no network usage except to download the model)
 - Customizable prompts, output lengths, and temperatures
 - Command-line interface for easy integration into workflows
 - Python API for integration into your applications
