@@ -17,7 +17,6 @@ MLX Alt Text is a local-first alt-text generator built on top of MLX-VLM. It all
 ## Requirements
 
 - macOS with Apple Silicon
-- Python 3.10–3.12
 
 ## Installation
 
