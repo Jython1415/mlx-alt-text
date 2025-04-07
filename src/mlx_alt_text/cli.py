@@ -58,10 +58,12 @@ def generate(image_path, prompt, model, max_tokens, temperature, verbose):
         click.echo(f"Error generating alt-text: {e}", err=True)
         raise click.Abort()
 
+
 @cli.group("model")
 def model():
     """Manage models for mlx-alt-text"""
     pass
+
 
 @model.command("download")
 @click.argument("model_name")
