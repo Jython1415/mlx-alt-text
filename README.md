@@ -33,15 +33,15 @@ pip install mlx-alt-text     # Python pacakge installation
 Generate alt-text for an image:
 
 ```bash
-mlx-alt-text path/to/image.jpg
+mlx-alt-text generate path/to/image.jpg
 ```
 
 With custom options:
 
 ```bash
-mlx-alt-text path/to/image.jpg \
+mlx-alt-text generate path/to/image.jpg \
   --prompt "Describe this image in detail for accessibility purposes" \
-  --model "mlx-community/SmolVLM-256M-Instruct-bf16" \
+  --model <path-to-model-snapshot> \
   --max-tokens 150 \
   --temperature 0.3
 ```
@@ -56,7 +56,7 @@ generator = AltTextGenerator()
 
 # Or with custom options
 generator = AltTextGenerator(
-    model_name="mlx-community/Qwen2-VL-2B-Instruct-4bit",
+    model_path="<path-to-model-snapshot",
     max_tokens=100,
     temperature=0.2
 )
@@ -69,16 +69,6 @@ alt_text = generator.generate(
 
 print(alt_text)
 ```
-
-## Available Models
-
-By default, MLX Alt Text uses `mlx-community/Qwen2-VL-2B-Instruct-4bit`, but you can specify other compatible models. Some examples below:
-
-- `mlx-community/Qwen2-VL-2B-Instruct-4bit` (default, ~2GB)
-- `mlx-community/SmolVLM-256M-Instruct-bf16` (smaller, ~256MB)
-- `mlx-community/SmolVLM-Instruct-bf16` (larger, better quality)
-
-The first time you use a model, it will be automatically downloaded from the Hugging Face Hub.
 
 ## Development Setup
 
