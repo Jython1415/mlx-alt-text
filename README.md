@@ -1,5 +1,7 @@
 # MLX Alt Text
 
+ARCHIVED! This project is being archived because I don't expect this niche to be valuable for long, and I don't intend to continue to improve the project. It was a great learning experience though, and that was the whole point.
+
 A Python package for generating alt-text for images using local MLX models.
 
 ## About
