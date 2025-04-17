@@ -97,16 +97,6 @@ uv run mlx-alt-text
 pytest
 ```
 
-### Other Development Notes
-
-```bash
-uv lock --upgrade # to upgrade all packages
-uv lock --upgrade <package> # to upgrade a single package
-uv build # to build the package
-uv run https://gist.githubusercontent.com/Jython1415/84f37a01fb9700d3eb72b67a52273222/raw/3d7ec10e3c6bb5f0191bd6681dd0016017a28a55/uv-publish-pypi.py # to publish the package
-uv run --with <PACKAGE> --no-project -- python -c "import <PACKAGE>" # to test if the package can be installed and imported with `uv run`
-```
-
 ## Acknowledgement
 
 I was inspired to try this project after using [Simon Willison](https://simonwillison.net)'s [`llm` package](https://llm.datasette.io/en/stable/)
